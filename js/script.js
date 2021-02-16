@@ -28,22 +28,10 @@ document.querySelector('.check').addEventListener('click', function () {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
-
-    // cuando el numero a encontrar es muy alto
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '🙊 Very high!';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = '🐒 You lost the game!';
-      document.querySelector('.score').textContent = 0;
-    }
-
-    // cuando el numero a encontrar es muy bajo
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '🙊 Very low!';
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? '🙊 Very high!' : '🙊 Very low!';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -51,10 +39,34 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
+
+  // cuando el numero a encontrar es muy alto
+  //   } else if (guess > secretNumber) {
+  //     if (score > 1) {
+  //       document.querySelector('.message').textContent = '🙊 Very high!';
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       document.querySelector('.message').textContent = '🐒 You lost the game!';
+  //       document.querySelector('.score').textContent = 0;
+  //     }
+
+  //     // cuando el numero a encontrar es muy bajo
+  //   } else if (guess < secretNumber) {
+  //     if (score > 1) {
+  //       document.querySelector('.message').textContent = '🙊 Very low!';
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       document.querySelector('.message').textContent = '🐒 You lost the game!';
+  //       document.querySelector('.score').textContent = 0;
+  //     }
+  //   }
+  //
 });
 
 // Implement a game rest functionality, so that the player can make a new guess!
-// Your tasks:
+// tasks:
 
 // 1. Select the element with the 'again' class and attach a click event handler
 
@@ -64,7 +76,7 @@ document.querySelector('.check').addEventListener('click', function () {
 // 3. Restore the initial conditions of the message, number, score and guess input
 // fields
 
-// 4. Also restore the original background color (#222) and number width (15rem)
+// 4. Also restore the original background color (#25273d) and number width (240px)
 
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
