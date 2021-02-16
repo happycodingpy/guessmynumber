@@ -18,12 +18,22 @@ document.querySelector('.check').addEventListener('click', function () {
     // si el num secreto es igual a guess entonces mostramos el mensaje Number Correct!
     document.querySelector('.message').textContent = '🐵 Number correct!';
   } else if (guess > secretNumber) {
-    document.querySelector('.message').textContent = '🙊 Very high!';
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score > 1) {
+      document.querySelector('.message').textContent = '🙊 Very high!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = '🐒 You lost the game!';
+      document.querySelector('.score').textContent = 0;
+    }
   } else if (guess < secretNumber) {
-    document.querySelector('.message').textContent = '🙉 Very low!';
-    score--;
-    document.querySelector('.score').textContent = score;
+    if (score > 1) {
+      document.querySelector('.message').textContent = '🙊 Very high!';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = '🐒 You lost the game!';
+      document.querySelector('.score').textContent = 0;
+    }
   }
 });
