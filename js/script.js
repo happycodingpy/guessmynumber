@@ -3,6 +3,7 @@
 // let porque se reutilizara los valores
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
@@ -22,6 +23,12 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = '#A202BE';
     document.querySelector('.number').style.color = '#25273d';
     document.querySelector('.number').style.width = '480px';
+
+    if (score > highscore) {
+      highscore = score;
+      document.querySelector('.highscore').textContent = highscore;
+    }
+
     // cuando el numero a encontrar es muy alto
   } else if (guess > secretNumber) {
     if (score > 1) {
@@ -46,8 +53,6 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-// Coding Challenge #1
-
 // Implement a game rest functionality, so that the player can make a new guess!
 // Your tasks:
 
@@ -71,4 +76,5 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
   document.querySelector('body').style.backgroundColor = '#25273d';
   document.querySelector('.number').style.width = '240px';
+  document.querySelector('.highscore').textContent = 0;
 });
