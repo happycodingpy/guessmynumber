@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
-  background-color: #8787ff;
+  background-color: #25273d;
   /* background-color: #8992e0; */
   /* background-color: #60b347; */
 }
@@ -27,7 +27,7 @@ header {
 }
 
 main {
-  height: 65vh;
+  height: 60vh;
   color: #eee;
   display: flex;
   align-items: center;
@@ -59,7 +59,7 @@ h1 {
 
 .number {
   background: #eee;
-  color: #333;
+  color: #3a7cfd; /*3a7cfd 333*/
   font-size: 6rem;
   width: 15rem;
   padding: 3rem 0rem;
@@ -123,7 +123,6 @@ h1 {
 .footer {
   display: flex;
   justify-content: center;
-  padding: 10px;
 }
 
 .footer a {
