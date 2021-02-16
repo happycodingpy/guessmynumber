@@ -13,6 +13,10 @@ const hideSecreteNumber = secNum => {
   document.querySelector('.number').textContent = secNum;
 };
 
+const displayHighScore = highscore => {
+  document.querySelector('.highscore').textContent = highscore;
+};
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess);
@@ -36,7 +40,8 @@ document.querySelector('.check').addEventListener('click', function () {
 
     if (score > highscore) {
       highscore = score;
-      document.querySelector('.highscore').textContent = highscore;
+      // document.querySelector('.highscore').textContent = highscore;
+      displayHighScore(highscore);
     }
   } else if (guess !== secretNumber) {
     if (score > 1) {
