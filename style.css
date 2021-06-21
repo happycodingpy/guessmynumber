@@ -14,9 +14,7 @@ html {
 body {
   font-family: 'Press Start 2P', sans-serif;
   color: #eee;
-  background-color: #25273d;
-  /* background-color: #8992e0; */
-  /* background-color: #60b347; */
+  background-color: #161616;
 }
 
 /* LAYOUT */
@@ -27,7 +25,7 @@ header {
 }
 
 main {
-  height: 60vh;
+  height: 65vh;
   color: #eee;
   display: flex;
   align-items: center;
@@ -59,7 +57,7 @@ h1 {
 
 .number {
   background: #eee;
-  color: #3a7cfd; /*3a7cfd 333*/
+  color: #333;
   font-size: 6rem;
   width: 15rem;
   padding: 3rem 0rem;
@@ -118,40 +116,3 @@ h1 {
 .label-score {
   margin-bottom: 2rem;
 }
-
-/* FOOTER */
-.footer {
-  display: flex;
-  justify-content: center;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #ffff;
-}
-
-/* @media only screen and (max-width: 600px) {
-  body {
-    background-color: #25273d;
-  }
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 250px;
-  }
-
-  .between {
-    visibility: hidden;
-  }
-
-  h1 {
-    font-size: 15px;
-  }
-
-  .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8px;
-  }
-} */
